@@ -1,0 +1,78 @@
+steps:
+  V_COVID_FUTRE-5df80047-20d4-4b1d-b2aa-8336c240011a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: TGT
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 067aa15f-bfe7-4309-8b92-34e3f7799573
+              stepCounter: 5df80047-20d4-4b1d-b2aa-8336c240011a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d1e04aa-ad8e-4e72-bf98-e33ded63d514
+              stepCounter: 5df80047-20d4-4b1d-b2aa-8336c240011a
+            config: {}
+            dataType: VARCHAR(23)
+            defaultValue: ""
+            description: ""
+            name: RECORD_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2de8696-57de-4621-b87a-8270710462c4
+              stepCounter: 5df80047-20d4-4b1d-b2aa-8336c240011a
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STATE_OR_UT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4dfdd459-5156-4eb5-b5d3-296a67e76a3c
+              stepCounter: 5df80047-20d4-4b1d-b2aa-8336c240011a
+            config: {}
+            dataType: VARCHAR(6)
+            defaultValue: ""
+            description: ""
+            name: SEASON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TGT', 'V_COVID_FUTRE') }}
+      name: V_COVID_FUTRE
+      schema: ""
+      sqlType: Source
+      table: V_COVID_FUTRE
+      type: sourceInput
+    stepCounter: 5df80047-20d4-4b1d-b2aa-8336c240011a

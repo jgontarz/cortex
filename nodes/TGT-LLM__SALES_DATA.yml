@@ -1,0 +1,160 @@
+steps:
+  LLM__SALES_DATA-9f5393f8-81d6-4956-830d-19cd4e7d3f46:
+    operation:
+      config:
+        exby:
+          items:
+            - askque: Is this a type of clothing?
+              epartColName:
+                columnCounter: 129eeb8c-8868-4274-a044-a07523dba647
+                stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+        extractfunction: false
+        insertStrategy: INSERT
+        pby:
+          items:
+            - partColName: null
+        postSQL: ""
+        preSQL: ""
+        sby:
+          items:
+            - {}
+        sentimentfunction: false
+        summarizefunction: false
+        tby:
+          items:
+            - {}
+        testsEnabled: true
+        translatefunction: false
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TGT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c67a6d1f-2ad5-442e-a1c1-06dd3a8dfd35
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: STORE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8df7da34-51e4-4827-ade5-9aae7bc37640
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: d24b075b-42e8-485f-99a1-583e0cf038b5
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ITEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d78f563-bf81-4f24-951a-98df72d38df6
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: 129eeb8c-8868-4274-a044-a07523dba647
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: ARRAY
+            description: ""
+            hashDetails: null
+            name: ITEM_SUMARIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d78f563-bf81-4f24-951a-98df72d38df6
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: 1d70b9d2-77ae-4887-9a4e-b7b151c91dcf
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10893d72-2a57-4aba-bc2c-596e7c053c00
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: d3464a2d-5d48-43f2-91a2-1456aba8d0e8
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SALES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a761173b-b8ff-4870-b0fc-e250ce422e3c
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: 23fa4e41-0104-4f86-a907-1773f7d5a1e4
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: TEMPERATURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f60e7d41-5050-4722-8a2c-58a2d1b5a310
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: 31a23eaf-2249-4c55-855d-cea32de678b1
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: HUMIDITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31597721-3b34-490b-9e4b-dc424eb675a6
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+          - columnReference:
+              columnCounter: 9192c2fb-5f84-4db9-a535-0a7dc9e0a7bf
+              stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: HOLIDAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 90fb073f-39cb-433a-8511-fad0b972d510
+                    stepCounter: ad664ed1-fa3a-44a4-8a02-19d52adc97e0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: SALES_DATA
+            join:
+              joinCondition: FROM {{ ref('SRC', 'SALES_DATA') }} "SALES_DATA"
+            name: LLM__SALES_DATA
+            noLinkRefs: []
+      name: LLM__SALES_DATA
+      overrideSQL: false
+      schema: ""
+      sqlType: "234"
+      type: sql
+    stepCounter: 9f5393f8-81d6-4956-830d-19cd4e7d3f46

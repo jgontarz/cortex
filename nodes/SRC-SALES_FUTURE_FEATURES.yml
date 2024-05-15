@@ -1,0 +1,108 @@
+steps:
+  SALES_FUTURE_FEATURES-e3777f1b-e52c-41c8-a051-065401a91546:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 19c5b598-be7a-442a-ae63-9fc1fb0493f6
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: STORE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6fcdd41b-e7ca-4668-b464-140891c05fde
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ITEM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 197ed37e-ccf9-4d5a-b268-6dc81184f4bf
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e305601-e676-4b42-aa2d-004fa450645f
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TEMPERATURE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78455889-f154-491b-8d48-027587640bd4
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: HUMIDITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cc3182e5-85f0-4262-895e-730160a159ef
+              stepCounter: e3777f1b-e52c-41c8-a051-065401a91546
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: HOLIDAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SALES_FUTURE_FEATURES') }}
+      name: SALES_FUTURE_FEATURES
+      schema: ""
+      sqlType: Source
+      table: SALES_FUTURE_FEATURES
+      type: sourceInput
+    stepCounter: e3777f1b-e52c-41c8-a051-065401a91546

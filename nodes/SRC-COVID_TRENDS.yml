@@ -1,0 +1,78 @@
+steps:
+  COVID_TRENDS-e5ae40f0-8143-4352-b813-1fc7ea5cc28d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f93367aa-ec5f-4f3d-8841-532a8892de35
+              stepCounter: e5ae40f0-8143-4352-b813-1fc7ea5cc28d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e5cd0536-8394-4f12-b747-917c2a9f43e0
+              stepCounter: e5ae40f0-8143-4352-b813-1fc7ea5cc28d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: RECORD_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 511bc78c-e951-490c-9cd6-7b42824d7088
+              stepCounter: e5ae40f0-8143-4352-b813-1fc7ea5cc28d
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STATE_OR_UT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a17c4911-a502-4dcd-b8de-1031b98455c8
+              stepCounter: e5ae40f0-8143-4352-b813-1fc7ea5cc28d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CONFIRMED_CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'COVID_TRENDS') }}
+      name: COVID_TRENDS
+      schema: ""
+      sqlType: Source
+      table: COVID_TRENDS
+      type: sourceInput
+    stepCounter: e5ae40f0-8143-4352-b813-1fc7ea5cc28d
